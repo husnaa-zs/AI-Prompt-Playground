@@ -71,4 +71,4 @@ ai-prompt-playground/
 =======
 # AI-Prompt-Playground
 An interactive web app for experimenting with the Google Gemini API to tune prompts, adjust parameters, and see AI responses live.
->>>>>>> bb59a6be1f541c684174c19bd9dbfa45a4be4346
+
