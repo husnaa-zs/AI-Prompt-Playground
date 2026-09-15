@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Prompt Playground
 
 An interactive web app for experimenting with the Google Gemini API — write a prompt, tune parameters like temperature and output length, and see the AI's response rendered live. Includes prompt templates, history, and copy-to-clipboard.
@@ -67,3 +68,7 @@ ai-prompt-playground/
 ## Deployment notes
 - Set `GEMINI_API_KEY` as an environment variable on your host — never commit `.env`.
 - If you deploy frontend and backend separately, update `API_URL` in `public/app.js` to point to your backend's full URL.
+=======
+# AI-Prompt-Playground
+An interactive web app for experimenting with the Google Gemini API to tune prompts, adjust parameters, and see AI responses live.
+>>>>>>> bb59a6be1f541c684174c19bd9dbfa45a4be4346
