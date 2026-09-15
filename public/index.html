@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Prompt Playground</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+       <!-- <div class="hero-overlay">
+    <h1>AI PROMPT<br>PLAYGROUND</h1> 
+    <p>Powered by Google Gemini</p>
+  </div> -->
+    </header>
+
+    <main class="layout">
+      <!-- Controls -->
+      <section class="panel controls">
+        <h2>Templates</h2>
+        <div class="templates">
+          <button class="template-btn" data-template="Explain the following concept in simple terms, like I'm 5 years old: ">Explain simply</button>
+          <button class="template-btn" data-template="Summarize the following text in 3 bullet points: ">Summarize</button>
+          <button class="template-btn" data-template="Translate the following text to Spanish: ">Translate</button>
+          <button class="template-btn" data-template="Write a short, creative story about: ">Creative story</button>
+          <button class="template-btn" data-template="Review this code and suggest improvements: ">Code review</button>
+        </div>
+
+        <h2>Parameters</h2>
+        <div class="control-group">
+          <label for="temperature">Temperature: <span id="tempValue">0.7</span></label>
+          <input type="range" id="temperature" min="0" max="1" step="0.1" value="0.7" />
+          <p class="hint">Lower = precise & focused. Higher = creative & varied.</p>
+        </div>
+
+        <div class="control-group">
+          <label for="maxTokens">Max output length: <span id="tokensValue">1024</span></label>
+          <input type="range" id="maxTokens" min="128" max="2048" step="128" value="1024" />
+        </div>
+
+        <h2>History</h2>
+        <div id="history" class="history-list">
+          <p class="empty-state">No prompts yet</p>
+        </div>
+        <button id="clearHistory" class="secondary-btn">Clear history</button>
+      </section>
+
+      <!-- Main interaction area -->
+      <section class="panel main-panel">
+        <textarea
+          id="prompt"
+          placeholder="Ask anything... e.g. 'Explain how neural networks work'"
+          rows="5"
+        ></textarea>
+
+        <div class="action-row">
+          <button id="submit" class="primary-btn">
+            <span id="submitText">Generate</span>
+            <span id="spinner" class="spinner hidden"></span>
+          </button>
+          <button id="clearPrompt" class="secondary-btn">Clear</button>
+        </div>
+
+        <div id="errorBox" class="error-box hidden"></div>
+
+        <div class="output-wrapper">
+          <div class="output-header">
+            <h2>Response</h2>
+            <button id="copyBtn" class="icon-btn hidden" title="Copy response">📋 Copy</button>
+          </div>
+          <div id="output" class="output-box">
+            <p class="empty-state">Your AI-generated response will appear here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
