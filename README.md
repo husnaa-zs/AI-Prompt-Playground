@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # AI Prompt Playground
 
 An interactive web app for experimenting with the Google Gemini API — write a prompt, tune parameters like temperature and output length, and see the AI's response rendered live. Includes prompt templates, history, and copy-to-clipboard.
