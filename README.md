@@ -58,17 +58,7 @@ ai-prompt-playground/
 - Copy-to-clipboard for responses
 - Loading states and error handling
 
-## Ideas to extend it
-- Add streaming responses (Gemini supports `streamGenerateContent`)
-- Add a model picker (e.g. `gemini-2.0-flash` vs `gemini-1.5-pro`)
-- Persist history to a database instead of localStorage
-- Add user accounts and saved "playgrounds"
-- Deploy the frontend to Vercel/Netlify and the backend to Render/Railway
+Website Interface
+<img width="1459" height="824" alt="Screenshot 2026-09-15 125810" src="https://github.com/user-attachments/assets/c949d52c-0518-4b96-9620-61b808ac1c9f" />
 
-## Deployment notes
-- Set `GEMINI_API_KEY` as an environment variable on your host — never commit `.env`.
-- If you deploy frontend and backend separately, update `API_URL` in `public/app.js` to point to your backend's full URL.
-=======
-# AI-Prompt-Playground
-An interactive web app for experimenting with the Google Gemini API to tune prompts, adjust parameters, and see AI responses live.
 
